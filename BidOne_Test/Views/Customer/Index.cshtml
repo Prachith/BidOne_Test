@@ -1,0 +1,28 @@
+﻿@model BidOne_Test.Models.Customers
+
+
+<html>
+<head>
+
+    <h1>Customer Data</h1>
+
+</head>
+<body>
+
+    @using(Html.BeginForm("Add","Customer",FormMethod.Post))
+    {
+        <table>
+            <tr>
+                @Html.Label("First Name")
+                @Html.TextBoxFor(model => model.firstname, new { @class = "form-control" })
+            </tr>
+            <tr>
+                @Html.Label("Last Name")
+                @Html.TextBoxFor(model => model.lastname,new { @class = "form-control" })
+            </tr>
+        </table>
+        <input type="submit" value="Submit">
+    }
+
+</body>
+</html>
